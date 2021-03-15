@@ -1,0 +1,16 @@
+{
+  "name": "wine-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  },
+  "scripts": {
+    "gulp": "gulp watch"
+  },
+  "author": "",
+  "license": "ISC"
+}

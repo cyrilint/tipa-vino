@@ -1,0 +1,267 @@
+@import './module/reset';
+@import './module/vars';
+
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+
+.header {
+    color: #fff;
+    background-image: url('./images/wine-shop-main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    &__info {
+        font-size: 13px;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0 20px;
+    }
+
+    &__buttons {
+        position: absolute;
+        bottom: 150px;
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+.navigation {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    &__link {
+        flex: 1 1 0;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        border-right: 1px solid #fff;
+        padding: 13px 0;
+        transition: all .1s linear;
+    }
+    &__link:last-child {
+        border: none;
+    }
+    &__link:hover {
+        background-color: #000;
+    }
+}
+.button {
+    background-color: $brown;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all .1s linear;
+    &:hover {
+        background-color: #d8c04a;
+    }
+}
+.section-black {
+    background-color: $black;
+    &__description-box {
+        display: inline-block;
+        margin: 100px 0;
+        border: 1px solid #C4C4C4;
+        color: #fff;
+    }
+}
+.description-box {
+    padding: 60px 0;
+    &--form {
+        position: relative;
+    }
+    &__title {
+        text-align: center;
+        position: relative;
+        &--form {
+            position: absolute;
+            top:-15px;
+            right: 0;
+            left: 0;
+            background-color: $black;
+            margin: 0 360px;
+        }
+    }
+    &__title::after {
+        content: '';
+        height: 1px;
+        width: 160px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    &__text {
+        text-align: center;
+        margin: 0 190px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-top: 80px;
+        &--form {
+            margin: 0 315px;
+            margin-top: 30px;
+        }
+    }
+}
+
+.glass {
+    background-image: url('./images/wineglass.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75px;
+    height: 162px;
+    margin: 50px auto;
+}
+.article {
+    border-top: 1px solid $brown;
+    border-bottom: 1px solid $brown;
+    display: flex;
+    justify-items: center;
+    &__with-margin {
+        margin: 80px 0;
+    }
+        &__suptitle {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        &__title {
+            margin-top: 30px;
+            position: relative;
+            font-weight: 700;
+            font-size: 36px;
+            margin-bottom: 60px;
+        &::after {
+            content: '';
+            height: 1px;
+            width: 160px;
+            background-color: $black;
+            display: block;
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            }
+        }
+        &__text {
+            margin-bottom: 30px;
+        }
+		&__info {
+            padding: 60px 0;
+            padding-right: 110px;
+            flex: 1 1 0;
+		}
+
+		&__photo {
+            flex: 1 1 0;
+		}
+        &__photo-row {
+            display: flex;
+            padding-bottom: 30px;
+            &:first-child {
+                padding-top: 60px;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+        &__photo-row--bottom {
+            justify-content: space-between;
+            img {
+                max-height: 228px;
+            }
+        }
+    
+}
+
+.table {
+    display: flex;
+    margin-bottom: 30px;
+}
+.table__column:first-child {
+    flex: 1 1 0;
+    border-right: 1px solid #000;
+}
+.table__column:last-child {
+    flex: 4 1 0;
+}
+
+.table__row {
+    padding: 25px;
+    border-bottom: 1px solid #000;
+}
+.table__row:last-child {
+    border-bottom: none;
+}
+
+.grapes {
+    background-image: url('./images/grapes.png');
+    background-color: $black;
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -50px;
+    left: -23px;
+}
+
+.barrel {
+    background-image: url('./images/barrel.png');
+    background-color: $black;
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -50px;
+    right: -23px;
+}
+
+.description-box__form {
+    width: fit-content;
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+input {
+    background-color: $black;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 10px 3px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin-right: 30px;
+    &::placeholder {
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+.button--form {
+    color: #fff;
+    background-color: $black;
+    border: 1px solid #fff;
+    &:hover {
+        background-color: #fff;
+        color: $black;
+    }
+}
+
+@import './module/mobile'
